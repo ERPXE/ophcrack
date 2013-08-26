@@ -1,0 +1,16 @@
+.:
+bzimage
+filelist.txt
+ophcrack.menu
+ophcrack.png
+rootfs.gz
+vista
+xp
+
+./vista:
+ophcrackmain.menu
+tablesvista.gz
+
+./xp:
+ophcrackmain.menu
+tablesxp.gz

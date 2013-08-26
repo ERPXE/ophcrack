@@ -1,0 +1,39 @@
+LABEL OPHCRACKVISTAAUTO
+MENU LABEL ^Ophcrack VISTA Graphic mode - automatic
+KERNEL er/plugins/ophcrack/bzimage
+INITRD er/plugins/ophcrack/rootfs.gz,er/plugins/ophcrack/vista/tablesvista.gz
+APPEND rw rw=/dev/null vga=normal lang=C kmap=us screen=1024x768x16 autologin ramdisk_size=500000
+TEXT HELP
+                      Graphics mode 1024x768
+					  English language and US keyboard
+ENDTEXT
+
+LABEL OPHCRACKVISTAMANUAL
+MENU LABEL ^Ophcrack VISTA Graphic mode - manual
+KERNEL er/plugins/ophcrack/bzimage
+INITRD er/plugins/ophcrack/rootfs.gz,er/plugins/ophcrack/vista/tablesvista.gz
+APPEND rw root=/dev/null vga=normal autologin ramdisk_size=500000
+TEXT HELP
+					  Select the resolution, 
+					  language and keyboard map
+ENDTEXT
+
+LABEL OPHCRACKVISTALOWRAM
+MENU LABEL ^Ophcrack VISTA Graphic mode - low RAM
+KERNEL er/plugins/ophcrack/bzimage
+INITRD er/plugins/ophcrack/rootfs.gz,er/plugins/ophcrack/vista/tablesvista.gz
+APPEND rw root=/dev/null vga=normal ophcrack=lowram autologin ramdisk_size=500000
+TEXT HELP
+					  The tables are not fully preloaded 
+					  to save some RAM
+ENDTEXT
+
+LABEL OPHCRACKVISTATEXT
+MENU LABEL ^Ophcrack VISTA Text mode
+KERNEL er/plugins/ophcrack/bzimage
+INITRD er/plugins/ophcrack/rootfs.gz,er/plugins/ophcrack/vista/tablesvista.gz
+APPEND rw root=/dev/null vga=normal screen=text autologin ramdisk_size=500000
+TEXT HELP
+					  Use this mode if your graphic card
+					  is not detected by the graphic modes. 
+ENDTEXT

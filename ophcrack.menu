@@ -1,0 +1,14 @@
+MENU BEGIN OPHCRACK
+MENU LABEL ^Ophcrack 2.3.1
+# ------====> Include Menu Settings <====------
+MENU INCLUDE er/menuinc/header.module
+
+# ------====> Set Specific Page Settings <====------
+MENU BACKGROUND er/plugins/ophcrack/ophcrack.png
+
+MENU INCLUDE er/plugins/ophcrack/vista/ophcrackmain.menu
+MENU INCLUDE er/plugins/ophcrack/xp/ophcrackmain.menu
+  
+# ------====> Back <====------
+MENU INCLUDE er/menu/shared/menu-back.module
+MENU END
